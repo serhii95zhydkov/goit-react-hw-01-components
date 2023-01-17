@@ -9,7 +9,11 @@ const FriendList = ({ friends }) => {
       {friends.map(friend => {
         return (
           <li key={friend.id} className={styles.item}>
-            <FriendListItem friend={friend} />
+            <FriendListItem
+              avatar={friend.avatar}
+              name={friend.name}
+              isOnline={friend.isOnline}
+            />
           </li>
         );
       })}
@@ -21,7 +25,7 @@ FriendList.propTypes = {
   friends: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
-    }).isRequired,
+    }).isRequired
   ).isRequired,
 };
 
