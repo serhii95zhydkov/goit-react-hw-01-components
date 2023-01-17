@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import styles from './friendListItem.module.css';
 import clsx from 'clsx';
 
-const FriendListItem = ({ friend: { avatar, name, isOnline } }) => {
+const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
     <>
       <span
@@ -20,11 +20,9 @@ const FriendListItem = ({ friend: { avatar, name, isOnline } }) => {
 };
 
 FriendListItem.propTypes = {
-  friend: PropTypes.shape({
-    avatar: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    isOnline: PropTypes.bool.isRequired,
-  }).isRequired,
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
 };
 
 export default FriendListItem;
